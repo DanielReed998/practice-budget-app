@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <tabs>
+      <Tab text="Digits">
+         <content>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="904.0">
+               <children>
+                  <TableView fx:id="table" layoutX="349.0" layoutY="38.0" prefHeight="270.0" prefWidth="500.0">
+                    <columns>
+                      <TableColumn fx:id="category" prefWidth="147.0" text="Category" />
+                      <TableColumn fx:id="amount" minWidth="0.0" prefWidth="100.0" text="Amount" />
+                      <TableColumn fx:id="note" prefWidth="252.0" text="Note" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="addData" layoutX="565.0" layoutY="432.0" mnemonicParsing="false" onAction="#addData" text="Add Data" />
+                  <TextField fx:id="amountEntry" layoutX="63.0" layoutY="125.0" />
+                  <TextField fx:id="notesBox" layoutX="64.0" layoutY="280.0" />
+                  <TextField fx:id="datepicker" layoutX="63.0" layoutY="52.0" />
+                  <Label layoutX="139.0" layoutY="28.0" text="Date:" />
+                  <Label layoutX="125.0" layoutY="104.0" text="Food:" />
+                  <Label layoutX="135.0" layoutY="259.0" text="Notes:" />
+                  <Button fx:id="showData" layoutX="561.0" layoutY="480.0" mnemonicParsing="false" onAction="#showData" text="Show Data" />
+                  <Label fx:id="dbLabel" layoutX="491.0" layoutY="347.0" prefHeight="77.0" prefWidth="232.0" />
+                  <TextField fx:id="newCategory" layoutX="63.0" layoutY="386.0" />
+                  <Label layoutX="108.0" layoutY="365.0" text="New Category:" />
+                  <Button fx:id="addNewCategory" layoutX="133.0" layoutY="432.0" mnemonicParsing="false" onAction="#addNewCategory" text="Add" />
+                  <TextField fx:id="gasAmountEntry" layoutX="64.0" layoutY="201.0" />
+                  <Label layoutX="139.0" layoutY="180.0" text="Gas:" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Graph">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <LineChart fx:id="lineChart" prefHeight="400.0" prefWidth="904.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <Button fx:id="button" layoutX="420.0" layoutY="447.0" mnemonicParsing="false" text="Button" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>
